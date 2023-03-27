@@ -28,7 +28,7 @@ public class SongsOfThe80s implements SongIterator {
         ixBestSongs++;
     }
 
-    public Iterator createIterator() {
+    public Iterator<SongInfo> createIterator() {
         return Arrays.asList(bestSongs).iterator();
     }
 }

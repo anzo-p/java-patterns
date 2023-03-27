@@ -2,9 +2,9 @@ package behavioral.iterator.models;
 
 public class SongInfo {
 
-    private String songName;
-    private String bandName;
-    private int yearReleased;
+    private final String songName;
+    private final String bandName;
+    private final int yearReleased;
 
     public SongInfo(String songName, String bandName, int yearReleased) {
         this.songName = songName;

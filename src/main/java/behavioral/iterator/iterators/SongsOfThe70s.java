@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 public class SongsOfThe70s implements SongIterator {
 
-    private ArrayList<SongInfo> bestSongs;
+    private final ArrayList<SongInfo> bestSongs;
 
     public SongsOfThe70s() {
         this.bestSongs = new ArrayList<>();
@@ -23,7 +23,7 @@ public class SongsOfThe70s implements SongIterator {
         bestSongs.add(songInfo);
     }
 
-    public Iterator createIterator() {
+    public Iterator<SongInfo> createIterator() {
         return bestSongs.iterator();
     }
 }

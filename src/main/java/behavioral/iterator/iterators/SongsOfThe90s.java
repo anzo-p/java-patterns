@@ -22,7 +22,7 @@ public class SongsOfThe90s implements SongIterator {
         bestSongs.put(bestSongs.size(), songInfo);
     }
 
-    public Iterator createIterator() {
+    public Iterator<SongInfo> createIterator() {
         return bestSongs.values().iterator();
     }
 }

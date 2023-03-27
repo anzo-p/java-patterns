@@ -2,7 +2,7 @@ package behavioral.iterator;
 
 /*
     Iterator
-    - Uniform way to access different collections sequentially
+    - Uniform way for sequential access to different kinds of collections
 
     Adding iterable means
     - Implementing another SongIterator
