@@ -42,14 +42,13 @@ public class SingletonScrabbleLetterDealer {
     private SingletonScrabbleLetterDealer() {}
 
     public static SingletonScrabbleLetterDealer getInstance() {
-            if (theOnlyInstance == null) {
+        if (theOnlyInstance == null) {
 
-                synchronized (SingletonScrabbleLetterDealer.class) {
+            synchronized (SingletonScrabbleLetterDealer.class) {
                 if (firstThread) {
                     firstThread = false;
 
                     try {
-                        Thread.currentThread();
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
