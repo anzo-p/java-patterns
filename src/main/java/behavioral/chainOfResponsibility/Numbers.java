@@ -2,10 +2,10 @@ package behavioral.chainOfResponsibility;
 
 public class Numbers {
 
-    private int leftTerm;
-    private int rightTerm;
+    private final int leftTerm;
+    private final int rightTerm;
 
-    private String computation;
+    private final String computation;
 
     public Numbers(int leftTerm, int rightTerm, String computation) {
         this.leftTerm = leftTerm;

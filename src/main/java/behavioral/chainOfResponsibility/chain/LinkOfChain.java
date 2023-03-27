@@ -2,9 +2,13 @@ package behavioral.chainOfResponsibility.chain;
 
 import behavioral.chainOfResponsibility.Numbers;
 
-public interface LinkOfChain {
+public abstract class LinkOfChain {
 
-    void setNextInChain(LinkOfChain next);
+    protected LinkOfChain nextInChain;
 
-    void calculate(Numbers request);
+    public void setNextInChain(LinkOfChain next) {
+        nextInChain = next;
+    }
+
+    abstract public void calculate(Numbers request);
 }

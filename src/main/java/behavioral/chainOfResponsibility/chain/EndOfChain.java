@@ -2,7 +2,7 @@ package behavioral.chainOfResponsibility.chain;
 
 import behavioral.chainOfResponsibility.Numbers;
 
-public class EndOfChain implements LinkOfChain {
+public class EndOfChain extends LinkOfChain {
 
     public void setNextInChain(LinkOfChain next) { }
 

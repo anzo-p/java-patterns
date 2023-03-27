@@ -5,14 +5,9 @@ import behavioral.chainOfResponsibility.chain.LinkOfChain;
 
 import java.util.Objects;
 
-public class IntegerDivideNumbers implements LinkOfChain {
+public class IntegerDivideNumbers extends LinkOfChain {
 
-    private LinkOfChain nextInChain;
-
-    public void setNextInChain(LinkOfChain next) {
-        this.nextInChain = next;
-    }
-
+    @Override
     public void calculate(Numbers request) {
         if (Objects.equals(request.getComputation(), "divide")) {
             System.out.println(request.getLeftTerm() + " / " + request.getRightTerm() + " = " + (request.getLeftTerm() / request.getRightTerm()));

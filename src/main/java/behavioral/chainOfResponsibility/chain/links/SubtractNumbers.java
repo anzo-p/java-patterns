@@ -5,14 +5,9 @@ import behavioral.chainOfResponsibility.Numbers;
 
 import java.util.Objects;
 
-public class SubtractNumbers implements LinkOfChain {
+public class SubtractNumbers extends LinkOfChain {
 
-    private LinkOfChain nextInChain;
-
-    public void setNextInChain(LinkOfChain next) {
-        this.nextInChain = next;
-    }
-
+    @Override
     public void calculate(Numbers request) {
         if (Objects.equals(request.getComputation(), "subtract")) {
             System.out.println(request.getLeftTerm() + " - " + request.getRightTerm() + " = " + (request.getLeftTerm() - request.getRightTerm()));
