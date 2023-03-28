@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
     - Adding a new set of Memento, Caretaker and Originator
  */
 
-public class MementoRunner extends JFrame {
+public class Runner extends JFrame {
 
     class ButtonListener implements ActionListener {
 
@@ -24,8 +24,8 @@ public class MementoRunner extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == saveButton) {
                 String textAreaContent = article.getText();
-                originator.setArticle(textAreaContent);
                 careTaker.addMemento(originator.storeInMemento());
+                originator.setArticle(textAreaContent);
 
                 saveFiles++;
                 currentArticle++;
@@ -62,7 +62,7 @@ public class MementoRunner extends JFrame {
 
     public static void main(String[] args) {
 
-        new MementoRunner();
+        new Runner();
     }
 
     private JButton saveButton, undoButton, redoButton;
@@ -75,7 +75,7 @@ public class MementoRunner extends JFrame {
 
     int saveFiles = 0, currentArticle = 0;
 
-    public MementoRunner() {
+    public Runner() {
 
         this.setSize(750, 780);
         this.setTitle("Memento Design Pattern");
