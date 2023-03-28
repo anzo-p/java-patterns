@@ -4,7 +4,7 @@ import behavioral.observer.observable.ProducerCoordinator;
 
 public class MarketInfoConsumer implements Observer {
 
-    private String name;
+    private final String name;
 
     private double ibmQuote;
     private double aaplQuote;
@@ -12,7 +12,7 @@ public class MarketInfoConsumer implements Observer {
 
     private static int observerIDTracker = 0;
 
-    private int observerID;
+    private final int observerID;
 
     public MarketInfoConsumer(String name, ProducerCoordinator stockPicker) {
         this.name = name;

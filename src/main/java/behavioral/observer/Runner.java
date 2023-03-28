@@ -12,7 +12,7 @@ package behavioral.observer;
     - (Or a new implementation to the producer for that matter)
 
     In this example the producer is also a message broker coordinator.
-    These could be separate entities, but that is irrelevant from the perspective of the observer/consumer.
+    These could be separate entities, but that is irrelevant from the perspective of the pattern
  */
 
 import behavioral.observer.observable.MarketInfoProducerAndPubSubCoordinator;
