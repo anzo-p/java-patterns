@@ -2,11 +2,11 @@ package behavioral.state.states;
 
 import behavioral.state.ATMMachineContext;
 
-public class HasCorrectPinState implements ATMState {
+public class CorrectPinInsertedState implements ATMState {
 
     ATMMachineContext atmMachine;
 
-    public HasCorrectPinState(ATMMachineContext atmMachine) {
+    public CorrectPinInsertedState(ATMMachineContext atmMachine) {
         this.atmMachine = atmMachine;
     }
 

@@ -4,11 +4,11 @@ import behavioral.state.ATMMachineContext;
 
 import java.util.Objects;
 
-public class HasCardState implements ATMState {
+public class CardInsertedState implements ATMState {
 
     ATMMachineContext atmMachine;
 
-    public HasCardState(ATMMachineContext atmMachine) { // this is the sender / replyTo of Akka
+    public CardInsertedState(ATMMachineContext atmMachine) { // this is the sender / replyTo of Akka
         this.atmMachine = atmMachine;
     }
 

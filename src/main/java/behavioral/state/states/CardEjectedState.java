@@ -2,11 +2,11 @@ package behavioral.state.states;
 
 import behavioral.state.ATMMachineContext;
 
-public class HasNoCardState implements ATMState {
+public class CardEjectedState implements ATMState {
 
     ATMMachineContext atmMachine;
 
-    public HasNoCardState(ATMMachineContext atmMachine) {
+    public CardEjectedState(ATMMachineContext atmMachine) {
         this.atmMachine = atmMachine;
     }
 

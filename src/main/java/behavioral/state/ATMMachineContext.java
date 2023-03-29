@@ -4,10 +4,10 @@ import behavioral.state.states.*;
 
 public class ATMMachineContext {
 
-    private ATMState hasCard;
-    private ATMState noCard;
-    private ATMState hasCorrectPin;
-    private ATMState outOfCash;
+    private final ATMState hasCard;
+    private final ATMState noCard;
+    private final ATMState hasCorrectPin;
+    private final ATMState outOfCash;
 
     private ATMState state;
 
@@ -16,9 +16,9 @@ public class ATMMachineContext {
     private boolean correctPinEntered = false;
 
     public ATMMachineContext() {
-        hasCard = new HasCardState(this);
-        noCard = new HasNoCardState(this);
-        hasCorrectPin = new HasCorrectPinState(this);
+        hasCard = new CardInsertedState(this);
+        noCard = new CardEjectedState(this);
+        hasCorrectPin = new CorrectPinInsertedState(this);
         outOfCash = new OutOfCashState(this);
 
         state = noCard;
@@ -28,10 +28,7 @@ public class ATMMachineContext {
         }
     }
 
-    public void setState(ATMState state) {
-        this.state = state;
-    }
-
+    // This API should be private to states
     public ATMState getHasCardState() {
         return hasCard;
     }
@@ -48,6 +45,11 @@ public class ATMMachineContext {
         return outOfCash;
     }
 
+
+    public void setState(ATMState state) {
+        this.state = state;
+    }
+
     public void setCorrectPin() { this.correctPinEntered = true; }
 
     public void setIncorrectPin() { this.correctPinEntered = false; }
@@ -58,6 +60,7 @@ public class ATMMachineContext {
         this.cashBalance += insertedAmount;
     }
 
+    // This API should be private to Consumer
     public void insertCard() {
         this.state.insertCard();
     }
