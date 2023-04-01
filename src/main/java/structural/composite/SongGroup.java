@@ -1,14 +1,13 @@
 package structural.composite;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class SongGroup extends SongComponent {
 
-    private ArrayList songComponents = new ArrayList();
+    private final ArrayList<SongComponent> songComponents = new ArrayList<>();
 
-    private String groupName;
-    private String description;
+    private final String groupName;
+    private final String description;
 
     public SongGroup(String groupName, String description) {
         this.groupName = groupName;
@@ -35,18 +34,14 @@ public class SongGroup extends SongComponent {
 
     @Override
     public SongComponent get(int componentIndex) {
-        return (SongComponent) songComponents.get(componentIndex);
+        return songComponents.get(componentIndex);
     }
 
     @Override
     public void show() {
         System.out.println("\n" + getGroupName() + " " + getDescription());
 
-        Iterator songIterator = songComponents.iterator();
-
-        while (songIterator.hasNext()) {
-            SongComponent songInfo = (SongComponent) songIterator.next();
-
+        for (SongComponent songInfo : songComponents) {
             songInfo.show();
         }
     }

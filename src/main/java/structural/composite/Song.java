@@ -2,9 +2,9 @@ package structural.composite;
 
 public class Song extends SongComponent {
 
-    private String songGame;
-    private String bandName;
-    private int yearReleased;
+    private final String songGame;
+    private final String bandName;
+    private final int yearReleased;
 
     public Song(String songGame, String bandName, int yearReleased) {
         this.songGame = songGame;
