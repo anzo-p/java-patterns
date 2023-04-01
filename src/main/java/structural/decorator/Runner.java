@@ -1,5 +1,9 @@
 package structural.decorator;
 
+import structural.decorator.toppings.Dough;
+import structural.decorator.toppings.Mozzarella;
+import structural.decorator.toppings.TomatoSauce;
+
 /*
     Decorator
     - Modify object dynamically in a composition-like way through class constructors

@@ -1,4 +1,7 @@
-package structural.decorator;
+package structural.decorator.toppings;
+
+import structural.decorator.Pizza;
+import structural.decorator.ToppingDecorator;
 
 public class Mozzarella extends ToppingDecorator {
 

@@ -1,6 +1,6 @@
 package structural.decorator;
 
-abstract class ToppingDecorator implements Pizza {
+public abstract class ToppingDecorator implements Pizza {
 
     protected Pizza decorPizza;
 
