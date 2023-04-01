@@ -1,9 +1,9 @@
 package behavioral.command;
 
 /*
-    app.Command
+    Command
     - An object contains all info to call a method at a later point in time
-    - An Invoker transforms this info into a app.Command for a Receiver to executes it
+    - An Invoker transforms this info into a Command for a Receiver to execute
     - A command may be an undo command to a command executed earlier
 
     Adding new commands means
@@ -27,6 +27,22 @@ import java.util.List;
 public class Runner {
 
     public static void main(String[] args) {
+
+        /*
+            Receiver
+            - Any object whose methods we wish to call
+
+            Command
+            - Wraps any one method call of the receiver
+            - Also contains the parameters for that call
+            - Has reference to the receiver instance
+
+            Invoker
+            - Calls the command to execute
+            - May know multiple commands with different arguments for the same method in receiver
+            - May contain logic to choose the optimal out of various commands
+            - May contain queueing and controlling of the execution
+         */
 
         DeviceReceiver tvDevice = TVRemoteControl.getDevice();
 
