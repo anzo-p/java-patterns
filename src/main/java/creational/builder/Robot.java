@@ -1,6 +1,6 @@
 package creational.builder;
 
-public class Robot implements RobotBlueprint{
+public class Robot implements RobotBlueprint {
 
     private String head;
     private String torso;

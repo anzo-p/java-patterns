@@ -2,20 +2,33 @@ package creational.builder;
 
 public class RobotDirector {
 
-    private RobotBuilder robotBuilder;
+    private final RobotBuilder robotBuilder;
 
     public RobotDirector(RobotBuilder robotBuilder) {
         this.robotBuilder = robotBuilder;
     }
 
-    public Robot getRobot() {
-        return this.robotBuilder.getRobot();
+    public RobotDirector setHead(String head) {
+        robotBuilder.buildRobotHead(head);
+        return this;
     }
 
-    public void build() {
-        this.robotBuilder.buildRobotHead();
-        this.robotBuilder.buildRobotTorso();
-        this.robotBuilder.buildRobotArms();
-        this.robotBuilder.buildRobotLegs();
+    public RobotDirector setTorso(String torso) {
+        robotBuilder.buildRobotTorso(torso);
+        return this;
+    }
+
+    public RobotDirector setArms(String arms) {
+        robotBuilder.buildRobotArms(arms);
+        return this;
+    }
+
+    public RobotDirector setLegs(String legs) {
+        robotBuilder.buildRobotLegs(legs);
+        return this;
+    }
+
+    public Robot build() {
+        return this.robotBuilder.getRobot();
     }
 }

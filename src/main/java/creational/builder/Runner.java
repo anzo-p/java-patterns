@@ -22,9 +22,12 @@ public class Runner {
 
         RobotDirector robotDirector = new RobotDirector(robotBuilder);
 
-        robotDirector.build();
-
-        Robot robot = robotBuilder.getRobot();
+        Robot robot = robotDirector
+                .setHead("funny")
+                .setTorso("fancy")
+                .setArms("handy")
+                .setLegs("shiny")
+                .build();
 
         System.out.println("Robot built with head: " + robot.getHead() + " and torso: " + robot.getTorso() +
                 " and arms: " + robot.getArms() + " and legs: " + robot.getLegs());

@@ -2,26 +2,26 @@ package creational.builder;
 
 public class MrRobotBuilder implements RobotBuilder {
 
-    private Robot robot;
+    private final Robot robot;
 
     public MrRobotBuilder() {
         this.robot = new Robot();
     }
 
-    public void buildRobotHead() {
-        this.robot.setRobotHed("Fancy head");
+    public void buildRobotHead(String headType) {
+        this.robot.setRobotHed(headType + " head");
     }
 
-    public void buildRobotTorso() {
-        this.robot.setTorso("Silly torso");
+    public void buildRobotTorso(String torsoType) {
+        this.robot.setTorso(torsoType + " torso");
     }
 
-    public void buildRobotArms() {
-        this.robot.setArms("Shiny arms");
+    public void buildRobotArms(String armsType) {
+        this.robot.setArms(armsType + " arms");
     }
 
-    public void buildRobotLegs() {
-        this.robot.setLegs("Steel legs");
+    public void buildRobotLegs(String legsType) {
+        this.robot.setLegs(legsType + " legs");
     }
 
     public Robot getRobot() {

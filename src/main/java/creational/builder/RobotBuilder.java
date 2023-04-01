@@ -2,13 +2,13 @@ package creational.builder;
 
 public interface RobotBuilder {
 
-    void buildRobotHead();
+    void buildRobotHead(String head);
 
-    void buildRobotTorso();
+    void buildRobotTorso(String torso);
 
-    void buildRobotArms();
+    void buildRobotArms(String arms);
 
-    void buildRobotLegs();
+    void buildRobotLegs(String legs);
 
     Robot getRobot();
 }
