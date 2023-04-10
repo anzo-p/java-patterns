@@ -2,13 +2,21 @@ package creational.prototype;
 
 /*
     Prototype
+
+    Key Concepts
     - Instantiate a desired object (by cloning) on demand
     - Applies to any subclass for a superclass known to Client
     - 'Lazy'
 
-    Adding a new prototype means
-    - Adding a new implementation to an existing interface
-    - Adding a new produce interface and new implementations to it
+    Key Objects
+    -
+
+    Adding a Prototype
+    - Add a new implementation to an existing interface
+    - Add a new produce interface and new implementations to it
+
+    In practice
+        A language construct. Fork another immediately fully working instance in the throw without having to decide all details
  */
 
 public class Runner {

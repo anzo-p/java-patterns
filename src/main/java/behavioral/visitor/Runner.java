@@ -2,13 +2,21 @@ package behavioral.visitor;
 
 /*
     Visitor
+
+    Key concepts
     - Add methods to classes (or objects) without altering those classes much
 
-    Visitor, Visitable, Accept, Visit
+    Key Objects
+        Visitor, Visitable
 
-    Adding to Visitor means
-    - Implementing a new Visitable and adding it to a Visitor
-    - Implementing a new Visitor with methods that takes desired Visitable as argument
+    Adding a new Visitor
+    - Implement a new Visitable and adding it to a Visitor
+    - Implement a new Visitor with methods that takes desired Visitable as argument
+
+    In practice
+        Visitable contains methods that take Visitor as argument and runs their visit() method
+        Ie. visitor can freely call the visitables' public methods
+        This makes a visitor very much like an 'implicit' or a 'given' in Scala
  */
 
 import behavioral.visitor.visitables.HiTechGear;

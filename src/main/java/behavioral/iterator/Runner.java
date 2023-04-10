@@ -2,10 +2,18 @@ package behavioral.iterator;
 
 /*
     Iterator
+
+    Key concepts
     - Uniform way for sequential access to different kinds of collections
 
-    Adding iterable means
-    - Implementing another SongIterator
+    Key Objects
+        -
+
+    Adding an Iterable
+    - Implement another Iterator class
+
+    In practice
+        Iterator is most of all a language-like construct for sequential execution
  */
 
 import behavioral.iterator.iterators.SongsOfThe70s;

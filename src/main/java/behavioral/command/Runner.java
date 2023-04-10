@@ -2,13 +2,24 @@ package behavioral.command;
 
 /*
     Command
+
+    Key concepts
     - An object contains all info to call a method at a later point in time
     - An Invoker transforms this info into a Command for a Receiver to execute
     - A command may be an undo command to a command executed earlier
 
-    Adding new commands means
-    - Implementing new commands to an existing type
-    - Implementing a new receiver type and then implementing commands to it
+    Key Objects
+        Receiver, Command, Invoker
+
+    Adding a new Command
+    - Implement new commands to an existing type
+    - Implement a new receiver type and then implementing commands to it
+
+    In practice
+        The Command pattern wraps a Receiver class, which can be fully ignorant to the pattern
+        An Invoker class instantiates and calls the command, preferably asynchronously
+        Invoker may also contain execution intelligence, such as monitoring and retry rules
+        The Client minimally needs access to a proper Invoker instance that eventually points to the target receiver class
  */
 
 import behavioral.command.devices.radio.RadioRemoteControl;

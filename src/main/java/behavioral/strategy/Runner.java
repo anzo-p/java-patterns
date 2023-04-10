@@ -1,13 +1,23 @@
 package behavioral.strategy;
 
 /*
-    Strategy Pattern:
+    Strategy Pattern
+
+    Key concepts
     - When you need to choose one variation of a feature dynamically in an enum-like way
     - Often removes much need for nested conditionals
 
-    Adding a new variation means adding another Strategy class
+    Key Objects
+        Strategy
 
-    Would it be the same if they were mixed-in?
+    Adding a new Strategy
+    - Implement another Strategy class
+
+    In practice
+        An Object of interest has some feature of its behavior implemented into a Strategy
+        The Strategies are various ways of handling that feature
+        The chosen Strategy is initialized and passed to that object on its creation
+        The strategy may be changed at any time, though preferably immutably, in which case the above will suffice
  */
 
 import behavioral.strategy.models.Animal;

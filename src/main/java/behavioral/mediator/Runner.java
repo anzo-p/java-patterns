@@ -2,13 +2,27 @@ package behavioral.mediator;
 
 /*
     Mediator
+
+    Key concepts
     - Handle communication between objects, now called 'Colleagues'
     - Defines a contract interface through which colleagues may send messages to 'whomever it may concern'
     - Colleagues do not know each others
 
-    Adding a colleague means
-    - Extending from Colleague class
-    - Registering to mediator - in this example via the colleagues' constructors
+    Key Objects
+        Colleague, Mediator
+
+    Adding a Colleague
+    - Extend from Colleague class
+    - Register to mediator - in this example via the colleagues' constructors
+
+    In practice
+        Colleagues are objects that wish to emit messages to other colleagues without knowing anything about those other colleagues
+        Instead of calling those other colleagues directly, they know of, register to, and emit messages to a Mediator
+        The Mediator then contains the logic that the colleagues wish to do with other colleagues
+        Mediator knows of all the registered colleagues and calls them sequentially
+        Minimally the Client knows of one colleague which also might be passed to it by a Provider
+
+    Similar to observer pattern, but the focus is on moving all the logic of interactions between colleagues to the mediator
  */
 
 import behavioral.mediator.mediator.StockMediator;

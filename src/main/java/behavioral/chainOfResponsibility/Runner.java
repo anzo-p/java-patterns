@@ -9,15 +9,27 @@ import behavioral.chainOfResponsibility.chain.links.SubtractNumbers;
 
 /*
     Chain of Responsibility
+
+    Key concepts
     - Link up processors in some priority order
     - Pass computable arguments to first link in chain
     - The Links will either solve it or pass along
     - As an effect, the first suitable processor in chain will do it
     - Sort of prioritized, though flexible version of strategy pattern
 
-    Adding new Links to Chain means just that!
+    Key Objects
+        Link
+
+    Adding new Links to Chain
     - Implement a new link and link it to the chain
-     */
+
+    In practice
+        The Chain consists of Link Objects
+        A link knows its next Link in chain or a default entity: EndOfChain
+        The Link either executes its thing or calls the next Link in chain to its thing
+        A provider may compose and edit the link dynamically
+        The Client minimally needs to know the First Link of Chain
+ */
 
 public class Runner {
 
